@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: public
+    database: mining_db
+    schema: public
+    tables:
+      - name: customers
+      - name: products
+      - name: sales_orders
+      - name: sales_order_items
+      - name: invoices
+      - name: payments
+      - name: inventory_movements
+      - name: employees
+      - name: warehouses

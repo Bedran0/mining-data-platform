@@ -1,0 +1,81 @@
+[0m00:21:03.342284 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1091a0910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109205890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10923ccd0>]}
+
+
+============================== 00:21:03.347339 | 4903ec5e-9f05-4146-8bd6-a57299d53198 ==============================
+[0m00:21:03.347339 [info ] [MainThread]: Running with dbt=1.11.7
+[0m00:21:03.347618 [debug] [MainThread]: running dbt with arguments {'log_cache_events': 'False', 'debug': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'version_check': 'True', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'write_json': 'True', 'log_format': 'default', 'use_experimental_parser': 'False', 'partial_parse': 'True', 'invocation_command': 'dbt init mining', 'log_path': 'logs', 'use_colors': 'True', 'fail_fast': 'False', 'introspect': 'True', 'no_print': 'None', 'warn_error': 'None', 'cache_selected_only': 'False', 'quiet': 'False', 'printer_width': '80', 'empty': 'None', 'profiles_dir': '/Users/bedran/.dbt', 'target_path': 'None'}
+[0m00:21:03.351558 [info ] [MainThread]: Creating dbt configuration folder at /Users/bedran/.dbt
+[0m00:21:03.352145 [debug] [MainThread]: Starter project path: /Users/bedran/Desktop/mining-data-platform/venv-dbt/lib/python3.11/site-packages/dbt/include/starter_project
+[0m00:21:03.354647 [info ] [MainThread]: 
+Your new dbt project "mining" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m00:21:03.354819 [info ] [MainThread]: Setting up your profile.
+[0m00:21:59.105076 [error] [MainThread]: Encountered an error:
+
+[0m00:21:59.111654 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/bedran/Desktop/mining-data-platform/venv-dbt/lib/python3.11/site-packages/dbt/cli/requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bedran/Desktop/mining-data-platform/venv-dbt/lib/python3.11/site-packages/dbt/cli/requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bedran/Desktop/mining-data-platform/venv-dbt/lib/python3.11/site-packages/dbt/cli/main.py", line 483, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "/Users/bedran/Desktop/mining-data-platform/venv-dbt/lib/python3.11/site-packages/dbt/task/init.py", line 346, in run
+    self.setup_profile(profile_name)
+  File "/Users/bedran/Desktop/mining-data-platform/venv-dbt/lib/python3.11/site-packages/dbt/task/init.py", line 261, in setup_profile
+    adapter = self.ask_for_adapter_choice()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bedran/Desktop/mining-data-platform/venv-dbt/lib/python3.11/site-packages/dbt/task/init.py", line 242, in ask_for_adapter_choice
+    numeric_choice = click.prompt(prompt_msg, type=click.INT)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bedran/Desktop/mining-data-platform/venv-dbt/lib/python3.11/site-packages/click/termui.py", line 171, in prompt
+    value = prompt_func(prompt)
+            ^^^^^^^^^^^^^^^^^^^
+  File "/Users/bedran/Desktop/mining-data-platform/venv-dbt/lib/python3.11/site-packages/click/termui.py", line 154, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m00:21:59.359446 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": false, "command_wall_clock_time": 56.053024, "process_in_blocks": "0", "process_kernel_time": 0.104263, "process_mem_max_rss": "110034944", "process_out_blocks": "0", "process_user_time": 0.634379}
+[0m00:21:59.360488 [debug] [MainThread]: Command `dbt init` failed at 00:21:59.360232 after 56.05 seconds
+[0m00:21:59.361808 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109223510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109223950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104a6b4d0>]}
+[0m00:21:59.362353 [debug] [MainThread]: Flushing usage events
+[0m00:22:00.127081 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:22:06.178868 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108b69250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108c04590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108c04f10>]}
+
+
+============================== 00:22:06.181359 | e2c8fb87-e57c-494e-8aab-b5cefbdc9a0d ==============================
+[0m00:22:06.181359 [info ] [MainThread]: Running with dbt=1.11.7
+[0m00:22:06.181635 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt init mining', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'quiet': 'False', 'warn_error': 'None', 'target_path': 'None', 'no_print': 'None', 'empty': 'None', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'debug': 'False', 'log_cache_events': 'False', 'cache_selected_only': 'False', 'static_parser': 'True', 'profiles_dir': '/Users/bedran/.dbt', 'partial_parse': 'True', 'printer_width': '80', 'log_format': 'default', 'version_check': 'True', 'log_path': 'logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_colors': 'True', 'fail_fast': 'False', 'introspect': 'True'}
+[0m00:22:06.190484 [info ] [MainThread]: A project called mining already exists here.
+[0m00:22:06.191661 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 0.044745166, "process_in_blocks": "0", "process_kernel_time": 0.107461, "process_mem_max_rss": "106692608", "process_out_blocks": "0", "process_user_time": 0.621052}
+[0m00:22:06.191890 [debug] [MainThread]: Command `dbt init` succeeded at 00:22:06.191843 after 0.05 seconds
+[0m00:22:06.192069 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1043cdfd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108bce1d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10452f4d0>]}
+[0m00:22:06.192249 [debug] [MainThread]: Flushing usage events
+[0m00:22:06.921915 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:22:22.356781 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1049f38d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108b5f3d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108afba50>]}
+
+
+============================== 00:22:22.358899 | 4ab515f5-4c79-4f24-9c57-624f8603ddb5 ==============================
+[0m00:22:22.358899 [info ] [MainThread]: Running with dbt=1.11.7
+[0m00:22:22.359175 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'invocation_command': 'dbt init mining', 'warn_error': 'None', 'static_parser': 'True', 'introspect': 'True', 'log_path': 'logs', 'empty': 'None', 'partial_parse': 'True', 'log_cache_events': 'False', 'indirect_selection': 'eager', 'fail_fast': 'False', 'profiles_dir': '/Users/bedran/.dbt', 'write_json': 'True', 'cache_selected_only': 'False', 'no_print': 'None', 'debug': 'False', 'quiet': 'False', 'target_path': 'None', 'use_colors': 'True', 'printer_width': '80', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_experimental_parser': 'False', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m00:22:22.364246 [info ] [MainThread]: A project called mining already exists here.
+[0m00:22:22.365416 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 0.03879025, "process_in_blocks": "0", "process_kernel_time": 0.101428, "process_mem_max_rss": "109576192", "process_out_blocks": "0", "process_user_time": 0.616361}
+[0m00:22:22.365640 [debug] [MainThread]: Command `dbt init` succeeded at 00:22:22.365594 after 0.04 seconds
+[0m00:22:22.365813 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108b98910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108b5cf10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10259f3d0>]}
+[0m00:22:22.365988 [debug] [MainThread]: Flushing usage events
+[0m00:22:24.108118 [debug] [MainThread]: An error was encountered while trying to flush usage events
