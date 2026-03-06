@@ -1,0 +1,11 @@
+CREATE TABLE suppliers (
+    id              SERIAL PRIMARY KEY,
+    name            VARCHAR(255) NOT NULL,
+    country         VARCHAR(100),
+    city            VARCHAR(100),
+    contact_name    VARCHAR(255),
+    contact_email   VARCHAR(255),
+    contact_phone   VARCHAR(50),
+    is_active       BOOLEAN DEFAULT TRUE,
+    created_at      TIMESTAMP DEFAULT NOW()
+);
