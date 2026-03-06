@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mining-data-platform"
+version = "0.1.0"
+description = "End-to-end data platform for mining equipment company"
+requires-python = ">=3.10"
+dependencies = [
+    "psycopg2-binary>=2.9",
+    "faker>=19.0",
+    "pandas>=2.0",
+    "numpy>=1.25",
+    "sqlalchemy>=2.0",
+    "python-dotenv>=1.0",
+]
+
+[tool.setuptools]
+packages = []
