@@ -6,11 +6,75 @@ sources:
     schema: public
     tables:
       - name: customers
+        columns:
+          - name: id
+            tests:
+              - not_null
+              - unique
       - name: products
+        columns:
+          - name: id
+            tests:
+              - not_null
+              - unique
       - name: sales_orders
+        columns:
+          - name: id
+            tests:
+              - not_null
+              - unique
+          - name: customer_id
+            tests:
+              - not_null
       - name: sales_order_items
+        columns:
+          - name: id
+            tests:
+              - not_null
+              - unique
+          - name: order_id
+            tests:
+              - not_null
+          - name: product_id
+            tests:
+              - not_null
       - name: invoices
+        columns:
+          - name: id
+            tests:
+              - not_null
+              - unique
+          - name: invoice_number
+            tests:
+              - not_null
+              - unique
       - name: payments
+        columns:
+          - name: id
+            tests:
+              - not_null
+              - unique
+          - name: invoice_id
+            tests:
+              - not_null
       - name: inventory_movements
+        columns:
+          - name: id
+            tests:
+              - not_null
+              - unique
+          - name: product_id
+            tests:
+              - not_null
       - name: employees
+        columns:
+          - name: id
+            tests:
+              - not_null
+              - unique
       - name: warehouses
+        columns:
+          - name: id
+            tests:
+              - not_null
+              - unique

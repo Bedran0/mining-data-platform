@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_products
+    description: "Product dimension with enriched attributes."
+    columns:
+      - name: product_id
+        tests:
+          - not_null
+          - unique
+

@@ -36,7 +36,6 @@ cd mining-data-platform
 python3 -m venv venv
 source venv/bin/activate
 pip install -e .
-pip install scikit-learn
 ```
 
 Create a `.env` file:

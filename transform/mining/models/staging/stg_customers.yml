@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_customers
+    description: "Cleaned customer dimension with standardized fields."
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+          - unique
+
