@@ -1,0 +1,59 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:16
+    container_name: mining_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: mining_db
+      POSTGRES_USER: mining_user
+      POSTGRES_PASSWORD: mining_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U mining_user -d mining_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  app:
+    build: .
+    container_name: mining_app
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: mining_db
+      DB_USER: mining_user
+      DB_PASSWORD: mining_password
+    restart: "no"
+    # Runs once on startup to create tables and generate synthetic data.
+    command: >
+      bash -c "python database/migrate.py &&
+               python ingestion/generate_data.py &&
+               echo '✅ Database initialized and seeded.'"
+
+  metabase:
+    image: metabase/metabase:latest
+    container_name: mining_metabase
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "3000:3000"
+    environment:
+      MB_JETTY_PORT: 3000
+      MB_JETTY_HOST: 0.0.0.0
+      JAVA_TOOL_OPTIONS: "-Xms512m -Xmx512m"
+    volumes:
+      - metabase_data:/metabase-data
+
+volumes:
+  db_data:
+  metabase_data:
+
