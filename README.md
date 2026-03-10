@@ -1,10 +1,10 @@
-# ⛏️ Mining Equipment Data Platform
+# Mining Equipment Data Platform
 
 A full end-to-end data platform built for a mining and excavation equipment company. Covers everything from raw database design to business analytics, machine learning, and a visual dashboard — all runnable with a single command via Docker.
 
 ---
 
-## 🚀 Quick Start (Docker)
+## Quick Start (Docker)
 
 The fastest way to run the project. No Python or PostgreSQL installation needed.
 
@@ -30,7 +30,7 @@ Then open your browser and go to `http://localhost:3000` to explore the data vis
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 generate_data.py
@@ -48,7 +48,7 @@ dbt (transform layer)  ◄──── staging + marts
 
 ---
 
-## 🗄️ Database Schema
+## Database Schema
 
 15 tables covering the full business lifecycle:
 
@@ -66,7 +66,7 @@ All tables are fully normalized with foreign key relationships. The synthetic da
 
 ---
 
-## 📊 Analytics (dbt)
+## Analytics (dbt)
 
 The `transform/` layer uses [dbt](https://www.getdbt.com/) to build a clean analytics schema on top of the raw tables.
 
@@ -93,7 +93,7 @@ dbt run
 
 ---
 
-## 🤖 Machine Learning
+## Machine Learning
 
 A **demand forecasting model** that predicts monthly sales quantity per product.
 
@@ -115,7 +115,7 @@ The trained model is saved to `ml/demand_forecasting/model.pkl`.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 mining-data-platform/
@@ -141,7 +141,7 @@ mining-data-platform/
 
 ---
 
-## 🛠️ Manual Setup (without Docker)
+## Manual Setup (without Docker)
 
 If you prefer to run without Docker:
 
@@ -181,7 +181,7 @@ python ml/demand_forecasting/train.py
 
 ---
 
-## 🧰 Tech Stack
+## Tech Stack
 
 | Layer | Tool |
 |---|---|
